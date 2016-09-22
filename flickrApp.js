@@ -2,6 +2,13 @@
 
 document.getElementById("getdata").addEventListener("click", makeAJAXRequest);
 
+//Add event listener for enter key
+document.getElementById("query").addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) { 
+          document.getElementById("getdata").click();
+        }
+    })
+
 var resultsArray = [];
 
 function makeAJAXRequest () {
@@ -48,9 +55,8 @@ function writeResponse() {
     resultsArray = JSON.parse(this.responseText);
     var htmlString = "";
     
-    
     for (var i = 0; i < resultsArray.photos.photo.length; i++) {
-        htmlString += "<p id=" + i + ">" + resultsArray.photos.photo[i].title + "</p>";
+        htmlString += "<div class='photo-container'> <div class='photo'> <img src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div class='title_overlay'> <p>" + resultsArray.photos.photo[i].title + "</p> </div> </div> </div>"
         }
     
     document.getElementById("results").innerHTML = htmlString;

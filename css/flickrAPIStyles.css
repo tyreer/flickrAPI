@@ -1,0 +1,68 @@
+/* Web Fonts -------------------- */
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('../fonts/Lobster_1.3.otf');
+}
+
+/* Base Styles -------------------- */
+
+h1 {
+    font-family: 'Lobster', Helvetica, Arial, sans-serif;
+    font-size: 500%;
+}
+
+h2 {
+    font-family: 'Lobster', Helvetica, Arial, sans-serif;
+}
+
+.title_overlay p {
+    font-family: 'Lobster', Helvetica, Arial, sans-serif;
+    font-size: 300%;
+    line-height: 48px;
+}
+
+
+/* Div Styles -------------------- */
+
+#results {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    
+    width: 50%;
+}
+
+/* Layout containers -------------------- */
+
+.photo-container {
+	text-align: center;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+/* Page elements -------------------- */
+
+.photo {
+	position: relative;
+	line-height: 0;
+}
+
+.title_overlay {
+    color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0, .80);
+}
