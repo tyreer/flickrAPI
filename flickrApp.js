@@ -69,7 +69,7 @@ function writeResponse() {
 function toggleOverlay(){
     if (this.className === 'title_overlay') {
       this.className = 'title_overlay_off';
-    } else {
+    } else if (this.className === 'title_overlay_off') {
       this.className = 'title_overlay';
     }
 }
