@@ -67,6 +67,7 @@ function writeResponse() {
 }
 
 function toggleOverlay(id){
+  console.log(id);
   if (document.getElementById(id).className === 'title_overlay') {
     document.getElementById(id).className = 'title_overlay_off';
   } else {
