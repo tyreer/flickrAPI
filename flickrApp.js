@@ -62,22 +62,16 @@ function writeResponse() {
 
      for (var j = 0; j < resultsArray.photos.photo.length; j++) {
         // document.getElementById(j).addEventListener("click", makeAJAX2Request);
-        document.getElementById(j).addEventListener("click", toggleOverlay(j));
+        document.getElementById(j).addEventListener("click", toggleOverlay);
     }
 }
 
-function toggleOverlay(id){
-  console.log(id);
-  if (document.getElementById(id).className === 'title_overlay') {
-    document.getElementById(id).className = 'title_overlay_off';
-  } else {
-    document.getElementById(id).className = 'title_overlay';
-  }
-    //
-    // if (this.className === 'title_overlay') {
-    //   this.className = 'title_overlay_off';
-    // } else {
-    //   console.log('y');
-    //   this.className = 'title_overlay';
-    // }
+function toggleOverlay(){
+    console.log('y');
+    if (this.className === 'title_overlay') {
+      this.className = 'title_overlay_off';
+    } else {
+      console.log('x');
+      this.className = 'title_overlay';
+    }
 }
