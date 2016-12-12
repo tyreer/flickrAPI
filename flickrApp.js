@@ -67,10 +67,10 @@ function writeResponse() {
 }
 
 function toggleOverlay(id){
-  if (document.getElementById(id)=== 'title_overlay') {
-    document.getElementById(id) = 'title_overlay_off';
+  if (document.getElementById(id).className === 'title_overlay') {
+    document.getElementById(id).className = 'title_overlay_off';
   } else {
-    document.getElementById(id) = 'title_overlay';
+    document.getElementById(id).className = 'title_overlay';
   }
     //
     // if (this.className === 'title_overlay') {
