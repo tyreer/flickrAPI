@@ -130,6 +130,10 @@ h2 {
 	overflow: hidden;
 }
 
+.title_overlay:hover {
+  display: none;
+}
+
 .title_overlay_off {
   display:none;
 }
