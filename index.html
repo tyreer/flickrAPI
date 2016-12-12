@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Flickr Test</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/flickrAPIStyles.css">
   </head>
   <body>
@@ -10,15 +11,12 @@
       <header class = "header">
         <div class = "main-title-text">
           <h1>Flickr Titles</h1>
+          <input type="text" id="query" value="">
+          <a href="#results"><button id="getdata">Search</button></a>
+          <h2>Search a term on Flickr to see how users<br>title their photos</h2>
         </div>
-        <br>
-        <h2>Search a term on Flickr to see how users title their photos</h2>
-        <input type="text" id="query" value="" >
-        <button id="getdata">Search</button>
       </header>
-      
       <div id="results">
-        
       </div>
     </div>
     <script src="flickrApp.js" type="text/javascript"></script>
