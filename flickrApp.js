@@ -63,13 +63,15 @@ function writeResponse() {
      for (var j = 0; j < resultsArray.photos.photo.length; j++) {
         // document.getElementById(j).addEventListener("click", makeAJAX2Request);
         document.getElementById(j).addEventListener("click", toggleOverlay);
-        document.getElementById(j).addEventListener("click", toggleOverlayBack);
+        // document.getElementById(j).addEventListener("click", toggleOverlayBack);
     }
 }
 
 function toggleOverlay(){
     console.log('y');
-    if (this.className === 'title_overlay') {
+    if (this.className === 'title_overlay_off') {
+      this.className = 'title_overlay';
+    } else {
       this.className = 'title_overlay_off';
     }
     //  else {
@@ -78,9 +80,7 @@ function toggleOverlay(){
     // }
 }
 
-function toggleOverlayBack(){
-    console.log('x');
-    if (this.className === 'title_overlay_off') {
-      this.className = 'title_overlay';
-    }
-}
+// function toggleOverlayBack(){
+//     console.log('x');
+//
+// }
