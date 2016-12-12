@@ -55,17 +55,21 @@ function writeResponse() {
     var htmlString = "";
 
     for (var i = 0; i < resultsArray.photos.photo.length; i++) {
-        htmlString += "<div id='" + i + "' class='photo-container'> <div class='photo'> <img src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div class='title_overlay'> <p>" + resultsArray.photos.photo[i].title + "</p> </div> </div> </div>"
+        htmlString += "<div class='photo-container'> <div class='photo'> <img src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div id='" + i + "' class='title_overlay'> <p>" + resultsArray.photos.photo[i].title + "</p> </div> </div> </div>"
         }
 
     document.getElementById("results").innerHTML = htmlString;
 
      for (var j = 0; j < resultsArray.photos.photo.length; j++) {
-        document.getElementById(j).addEventListener("click", makeAJAX2Request);
+        // document.getElementById(j).addEventListener("click", makeAJAX2Request);
         document.getElementById(j).addEventListener("click", toggleOverlay);
     }
 }
 
 function toggleOverlay(){
-    console.log(this);
+    if this.className === 'title_overlay'{
+      this.className = 'title_overlay_off';
+    } else {
+      this.className = 'title_overlay';
+    }
 }
