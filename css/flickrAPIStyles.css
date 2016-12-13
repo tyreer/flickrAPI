@@ -66,7 +66,7 @@ h2 {
 .title_overlay p {
     font-family: 'Lobster', Helvetica, Arial, sans-serif;
     font-size: calc(1vw + 4vh + 2vmin);
-    line-height: 48px;
+    line-height: 100px;
 }
 
 /* Layout containers -------------------- */
@@ -89,6 +89,10 @@ h2 {
   margin: auto;
 	margin-bottom: 1em;
 	margin-top: 1em;
+}
+
+img {
+  width: 100vw;
 }
 
 /*#results {*/

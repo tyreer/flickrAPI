@@ -75,7 +75,6 @@ function toggleOverlayOff(){
 
 function toggleOverlayOn(){
     let id = this.getAttribute("id");
-    console.log(id.length);
     let divId = 0;
     if (id.length <= 6) {
         divId = id.charAt(5);
