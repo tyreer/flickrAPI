@@ -131,9 +131,11 @@ h2 {
 }
 
 .title_overlay:hover {
-  display: none;
+  /*display: none;*/
+  opacity:0; 
+  filter:alpha(opacity=0);
 }
 
 .title_overlay_off {
-  display:none;
+  display: none;
 }

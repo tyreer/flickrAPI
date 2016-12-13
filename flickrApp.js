@@ -62,7 +62,7 @@ function writeResponse() {
 
      for (var j = 0; j < resultsArray.photos.photo.length; j++) {
         // document.getElementById(j).addEventListener("click", makeAJAX2Request);
-        document.getElementById(j).addEventListener("click", toggleOverlay);
+        // document.getElementById(j).addEventListener("click", toggleOverlay);
     }
 }
 
