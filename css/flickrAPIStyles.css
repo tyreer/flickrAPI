@@ -56,17 +56,16 @@ h2 {
 #getdata {
   font-family: 'Lobster', Helvetica, Arial, sans-serif;
   background: darkgrey;
-  font-size: large;
+  font-size: calc(1vw + 4vh + 2vmin);
   color: white;
   cursor: pointer;
-  height: 100px;
-  width: 100px;
+  padding: 20px;
   border-radius: 100%;
 }
 
 .title_overlay p {
     font-family: 'Lobster', Helvetica, Arial, sans-serif;
-    font-size: xx-large;
+    font-size: calc(1vw + 4vh + 2vmin);
     line-height: 48px;
 }
 

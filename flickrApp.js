@@ -69,19 +69,19 @@ function writeResponse() {
 
 function toggleOverlayOff(){
     if (this.className === 'title_overlay') {
-        console.log('yas1');
       this.className = 'title_overlay_off';
     } 
-    // else {
-    //     this.className = 'title_overlay';
-    // }
 }
 
 function toggleOverlayOn(){
     let id = this.getAttribute("id");
-    let divId =  id.charAt(5);
-    if (document.getElementById(divId).className === 'title_overlay_off') {
-      console.log('yas2');
-      document.getElementById(divId).className = 'title_overlay';
+    console.log(id.length);
+    let divId = 0;
+    if (id.length <= 6) {
+        divId = id.charAt(5);
+    } else if (id.length > 6) { 
+        divId =  id.charAt(5)+id.charAt(6);
     }
+    
+    document.getElementById(divId).className = 'title_overlay';
 }
