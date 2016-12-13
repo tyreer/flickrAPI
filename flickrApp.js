@@ -55,22 +55,33 @@ function writeResponse() {
     var htmlString = "";
 
     for (var i = 0; i < resultsArray.photos.photo.length; i++) {
-        htmlString += "<div class='photo-container'> <div class='photo'> <img src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div id='" + i + "' class='title_overlay'> <p>" + resultsArray.photos.photo[i].title + "</p> </div> </div> </div>"
+        htmlString += "<div class='photo-container'> <div class='photo'> <img id='outer" + i + "' src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div id='" + i + "' class='title_overlay'> <p>" + resultsArray.photos.photo[i].title + "</p> </div> </div> </div>"
         }
 
     document.getElementById("results").innerHTML = htmlString;
 
      for (var j = 0; j < resultsArray.photos.photo.length; j++) {
         // document.getElementById(j).addEventListener("click", makeAJAX2Request);
-        // document.getElementById(j).addEventListener("click", toggleOverlay);
+        document.getElementById(j).addEventListener("click", toggleOverlayOff);
+        document.getElementById("outer"+j).addEventListener("click", toggleOverlayOn);
     }
 }
 
-function toggleOverlay(){
-    console.log('y');
-    if (this.className === 'title_overlay_off') {
-      this.className = 'title_overlay';
-    } else {
+function toggleOverlayOff(){
+    if (this.className === 'title_overlay') {
+        console.log('yas1');
       this.className = 'title_overlay_off';
+    } 
+    // else {
+    //     this.className = 'title_overlay';
+    // }
+}
+
+function toggleOverlayOn(){
+    let id = this.getAttribute("id");
+    let divId =  id.charAt(5);
+    if (document.getElementById(divId).className === 'title_overlay_off') {
+      console.log('yas2');
+      document.getElementById(divId).className = 'title_overlay';
     }
 }

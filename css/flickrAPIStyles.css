@@ -14,6 +14,7 @@
 h1 {
     font-family: 'Lobster', Helvetica, Arial, sans-serif;
     font-size: calc(4vw + 4vh + 2vmin);
+    margin: 20px 0;
 }
 
 h2 {
@@ -27,6 +28,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*overflow: hidden;*/
 }
 
 .main-title-text {
@@ -40,13 +42,9 @@ h2 {
     justify-content: center;
 }
 
-.main-title-text h1 {
-    margin: 20px 0;
-}
-
 #query {
   font-family: 'Lobster', Helvetica, Arial, sans-serif;
-  font-size: xx-large;
+  font-size: calc(1vw + 4vh + 2vmin);
   text-align: center;
   color: red;
   width: 90%;
@@ -131,7 +129,6 @@ h2 {
 }
 
 .title_overlay:hover {
-  /*display: none;*/
   opacity:0; 
   filter:alpha(opacity=0);
 }
