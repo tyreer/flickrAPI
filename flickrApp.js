@@ -2,6 +2,8 @@
 
 document.getElementById("getdata").addEventListener("click", makeAJAXRequest);
 document.getElementById("getdata").addEventListener("click", jumpDownTimer);
+document.getElementById("getdata").addEventListener("click", showTop);
+document.getElementById("top").addEventListener("click", hideTop);
 
 //Add event listener for enter key
 document.getElementById("query").addEventListener("keyup", function (e) {
@@ -63,7 +65,21 @@ function jumpDownTimer(){
 }
 
 function jumpDown(){
+    console.log('scrolled');
     window.scroll(0, 700);
+}
+
+function showTop(){
+   if (window.innerWidth > 728) {
+        document.getElementById("top").className = 'top-jump-show';
+    }
+}
+
+function hideTop(){
+     if (window.innerWidth > 728 && document.getElementById("top").className === 'top-jump-show'){
+            document.getElementById("top").className = 'top-jump';
+            console.log('yay');
+    }
 }
 
 // **************** 
