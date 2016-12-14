@@ -69,6 +69,10 @@ h2 {
     line-height: 100px;
 }
 
+.top-jump {
+  display: none;
+}
+
 /* Layout containers -------------------- */
 
 .container {
@@ -95,20 +99,6 @@ img {
   width: 100vw;
 }
 
-/*#results {*/
-    /*display: -webkit-flex;*/
-    /*display: flex;*/
-    /*-webkit-flex-direction: column;*/
-    /*flex-direction: column;*/
-    /*-webkit-align-items: center;*/
-    /*align-items: center;*/
-    /*-webkit-justify-content: center;*/
-    /*justify-content: center;*/
-    /*align-self: center;*/
-
-    /*width: 50%;*/
-/*}*/
-
 /* Page elements -------------------- */
 
 .photo {
@@ -126,16 +116,49 @@ img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	width: 90vw;
 	align-items: center;
 	background: rgba(0,0,0, .80);
 	overflow: hidden;
 }
 
-.title_overlay:hover {
-  opacity:0; 
-  filter:alpha(opacity=0);
-}
+/*.title_overlay:hover {*/
+/*  opacity:0; */
+/*  filter:alpha(opacity=0);*/
+/*}*/
 
 .title_overlay_off {
   display: none;
+}
+
+
+@media (min-width: 728px) {
+   img {
+    width: 60vw;
+  }
+
+  .photo-container {
+    width: 50vw;
+  }
+  
+  .title_overlay {
+    width: 50vw;
+  }
+  
+  .title_overlay p {
+    line-height: 60px;
+  }
+  
+  .top-jump {
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    text-decoration: none;
+    color:red;
+  }
+  
+  .top-jump h2 {
+    margin: 0;
+  }
 }
