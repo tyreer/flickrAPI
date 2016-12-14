@@ -63,6 +63,7 @@ function jumpDownTimer(){
 }
 
 function jumpDown(){
+    console.log('yay');
     window.scroll(0, 700);
 }
 
