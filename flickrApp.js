@@ -3,6 +3,7 @@
 document.getElementById("getdata").addEventListener("click", makeAJAXRequest);
 document.getElementById("getdata").addEventListener("click", jumpDownTimer);
 document.getElementById("getdata").addEventListener("click", showTop);
+document.getElementById("getdata").addEventListener("click", eraseQuery);
 document.getElementById("top").addEventListener("click", hideTop);
 
 //Add event listener for enter key
@@ -66,7 +67,7 @@ function jumpDownTimer(){
 
 function jumpDown(){
     console.log('scrolled');
-    window.scroll(0, 700);
+    window.scroll(0, 600);
 }
 
 function showTop(){
@@ -81,6 +82,11 @@ function hideTop(){
             console.log('yay');
     }
 }
+
+function eraseQuery(){
+   document.getElementById("query").value = '';
+}
+
 
 // **************** 
 // Archive
