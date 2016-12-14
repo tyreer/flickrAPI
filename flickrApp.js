@@ -59,7 +59,7 @@ function toggleOverlayOn(){
 }
 
 function jumpDownTimer(){
-   let timeoutID = window.setTimeout(jumpDown, 400);
+   let timeoutID = window.setTimeout(jumpDown, 1000);
 }
 
 function jumpDown(){
