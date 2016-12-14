@@ -59,11 +59,10 @@ function toggleOverlayOn(){
 }
 
 function jumpDownTimer(){
-   let timeoutID = window.setTimeout(jumpDown, 1000);
+   let timeoutID = window.setTimeout(jumpDown, 800);
 }
 
 function jumpDown(){
-    console.log('yay');
     window.scroll(0, 700);
 }
 
