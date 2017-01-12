@@ -31,8 +31,9 @@ function writeResponse() {
     var htmlString = "";
 
     for (var i = 0; i < resultsArray.photos.photo.length; i++) {
-        htmlString += "<div class='photo-container'> <div class='photo'> <img id='outer" + i + "' src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div id='" + i + "' class='title_overlay'> <p>" + resultsArray.photos.photo[i].title + "</p> </div> </div> </div>"
-        }
+        var titleText = resultsArray.photos.photo[i].title.substring(0,133);
+        htmlString += "<div class='photo-container'> <div class='photo'> <img id='outer" + i + "' src = https://farm" + resultsArray.photos.photo[i].farm + ".staticflickr.com/" + resultsArray.photos.photo[i].server + "/" + resultsArray.photos.photo[i].id + "_" + resultsArray.photos.photo[i].secret +".jpg> <div id='" + i + "' class='title_overlay'> <p>" + titleText + "</p> </div> </div> </div>"
+    }
 
     document.getElementById("results").innerHTML = htmlString;
 
@@ -66,7 +67,6 @@ function jumpDownTimer(){
 }
 
 function jumpDown(){
-    console.log('scrolled');
     window.scroll(0, 600);
 }
 
@@ -79,7 +79,6 @@ function showTop(){
 function hideTop(){
      if (window.innerWidth > 728 && document.getElementById("top").className === 'top-jump-show'){
             document.getElementById("top").className = 'top-jump';
-            console.log('yay');
     }
 }
 
