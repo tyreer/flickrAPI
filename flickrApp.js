@@ -18,7 +18,7 @@ var resultsArray = [];
 function makeAJAXRequest () {
 
     var request = new XMLHttpRequest();
-    var url = "//api.flickr.com/services/rest/?method=flickr.photos.search&api_key=14d6c693b3921164ffa803b24ba7fda2&format=json&nojsoncallback=?&text=";
+    var url = "//api.flickr.com/services/rest/?method=flickr.photos.search&api_key=<APIKEYHERE>&format=json&nojsoncallback=?&text=";
 
     request.addEventListener("load", writeResponse);
 
